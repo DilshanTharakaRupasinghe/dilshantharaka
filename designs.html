@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Samples</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* පේළියට දෙකයි */
+            gap: 20px;
+            padding: 150px 10% 50px;
+        }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: 1fr; } } /* Mobile එකේදී එක පේළියයි */
+        
+        .sample-card {
+            height: 350px;
+            border-radius: 30px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container"></div>
+    <nav class="navbar"><div class="nav-content"><a href="index.html">← Back to Home</a></div></nav>
+
+    <div class="gallery-grid">
+        <div class="sample-card liquid-glass" style="background-image: url('design1.jpg');"></div>
+        <div class="sample-card liquid-glass" style="background-image: url('design2.jpg');"></div>
+        <div class="sample-card liquid-glass" style="background-image: url('design3.jpg');"></div>
+        <div class="sample-card liquid-glass" style="background-image: url('design4.jpg');"></div>
+    </div>
+</body>
+</html>

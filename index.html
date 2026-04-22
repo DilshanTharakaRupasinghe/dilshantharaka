@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Designer & Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-container"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home">Home</a>
+            <a href="#Design">About</a>
+            <a href="#Video">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1 class="gradient-title">DESIGNER.</h1>
+        <p class="role-text">Graphic Designer & Video Editor</p>
+        
+        <div class="liquid-glass bio-box scroll-reveal">
+            <p>I craft high-end visual experiences and cinematic video edits. <br> 
+            Specializing in minimalist aesthetics and premium branding.</p>
+        </div>
+
+        <div class="social-grid">
+            <a href="#" class="glass-btn">Facebook</a>
+            <a href="#" class="glass-btn">Whatsapp</a>
+            <a href="#" class="glass-btn business-btn">Dilshan Vision</a>
+        </div>
+
+        <div class="card-wrapper">
+    <a href="designs.html" class="liquid-glass-card">
+        <div class="icon-blur"><i class="fa-solid fa-palette"></i></div>
+        <span>Design Samples</span>
+    </a>
+    <a href="videos.html" class="liquid-glass-card">
+        <div class="icon-blur"><i class="fa-solid fa-video"></i></div>
+        <span>Video Samples</span>
+    </a>
+</div>
+    </section>
+
+   
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
